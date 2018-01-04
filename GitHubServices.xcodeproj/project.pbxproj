@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		8836F5BC1FFEE51300E0E40E /* GitHubProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 8836F5BA1FFEE51300E0E40E /* GitHubProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8836F5C31FFEE6D700E0E40E /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836F5C21FFEE6D700E0E40E /* GitHubService.swift */; };
+		8836F5C71FFEE99300E0E40E /* GitHubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836F5C61FFEE99300E0E40E /* GitHubProvider.swift */; };
+		CA9E85DA051DBBA978736070 /* Pods_GitHubProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 719E2CC3D223D9FA513A4281 /* Pods_GitHubProvider.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8836F5B71FFEE51300E0E40E /* GitHubProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GitHubProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		719E2CC3D223D9FA513A4281 /* Pods_GitHubProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		786C2CF200C2FD21A6D37573 /* Pods-GitHubProvider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubProvider.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubProvider/Pods-GitHubProvider.debug.xcconfig"; sourceTree = "<group>"; };
+		8836F5B71FFEE51300E0E40E /* GitHubServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GitHubServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8836F5BA1FFEE51300E0E40E /* GitHubProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GitHubProvider.h; sourceTree = "<group>"; };
 		8836F5BB1FFEE51300E0E40E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8836F5C21FFEE6D700E0E40E /* GitHubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubService.swift; sourceTree = "<group>"; };
+		8836F5C61FFEE99300E0E40E /* GitHubProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubProvider.swift; sourceTree = "<group>"; };
+		F82696D708ED08B9A8237255 /* Pods-GitHubProvider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubProvider.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubProvider/Pods-GitHubProvider.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,24 +29,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA9E85DA051DBBA978736070 /* Pods_GitHubProvider.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		629CA65400F6C61BF8CBA66E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				786C2CF200C2FD21A6D37573 /* Pods-GitHubProvider.debug.xcconfig */,
+				F82696D708ED08B9A8237255 /* Pods-GitHubProvider.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8836F5AD1FFEE51300E0E40E = {
 			isa = PBXGroup;
 			children = (
 				8836F5B91FFEE51300E0E40E /* GitHubProvider */,
 				8836F5B81FFEE51300E0E40E /* Products */,
+				629CA65400F6C61BF8CBA66E /* Pods */,
+				DE8D03C265AA25E7738ABEFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		8836F5B81FFEE51300E0E40E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8836F5B71FFEE51300E0E40E /* GitHubProvider.framework */,
+				8836F5B71FFEE51300E0E40E /* GitHubServices.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -46,10 +66,36 @@
 		8836F5B91FFEE51300E0E40E /* GitHubProvider */ = {
 			isa = PBXGroup;
 			children = (
+				8836F5C41FFEE91100E0E40E /* Endpoint */,
+				8836F5C51FFEE92500E0E40E /* Proxy */,
 				8836F5BA1FFEE51300E0E40E /* GitHubProvider.h */,
 				8836F5BB1FFEE51300E0E40E /* Info.plist */,
 			);
 			path = GitHubProvider;
+			sourceTree = "<group>";
+		};
+		8836F5C41FFEE91100E0E40E /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				8836F5C21FFEE6D700E0E40E /* GitHubService.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		8836F5C51FFEE92500E0E40E /* Proxy */ = {
+			isa = PBXGroup;
+			children = (
+				8836F5C61FFEE99300E0E40E /* GitHubProvider.swift */,
+			);
+			path = Proxy;
+			sourceTree = "<group>";
+		};
+		DE8D03C265AA25E7738ABEFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				719E2CC3D223D9FA513A4281 /* Pods_GitHubProvider.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -66,22 +112,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8836F5B61FFEE51300E0E40E /* GitHubProvider */ = {
+		8836F5B61FFEE51300E0E40E /* GitHubServices */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8836F5BF1FFEE51300E0E40E /* Build configuration list for PBXNativeTarget "GitHubProvider" */;
+			buildConfigurationList = 8836F5BF1FFEE51300E0E40E /* Build configuration list for PBXNativeTarget "GitHubServices" */;
 			buildPhases = (
+				28845275411937494313CE51 /* [CP] Check Pods Manifest.lock */,
 				8836F5B21FFEE51300E0E40E /* Sources */,
 				8836F5B31FFEE51300E0E40E /* Frameworks */,
 				8836F5B41FFEE51300E0E40E /* Headers */,
 				8836F5B51FFEE51300E0E40E /* Resources */,
+				7665F6DC26EDE17E9B0DD721 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = GitHubProvider;
+			name = GitHubServices;
 			productName = GitHubProvider;
-			productReference = 8836F5B71FFEE51300E0E40E /* GitHubProvider.framework */;
+			productReference = 8836F5B71FFEE51300E0E40E /* GitHubServices.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -95,11 +143,12 @@
 				TargetAttributes = {
 					8836F5B61FFEE51300E0E40E = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 8836F5B11FFEE51300E0E40E /* Build configuration list for PBXProject "GitHubProvider" */;
+			buildConfigurationList = 8836F5B11FFEE51300E0E40E /* Build configuration list for PBXProject "GitHubServices" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,7 +160,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8836F5B61FFEE51300E0E40E /* GitHubProvider */,
+				8836F5B61FFEE51300E0E40E /* GitHubServices */,
 			);
 		};
 /* End PBXProject section */
@@ -126,11 +175,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		28845275411937494313CE51 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GitHubProvider-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7665F6DC26EDE17E9B0DD721 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GitHubProvider/Pods-GitHubProvider-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8836F5B21FFEE51300E0E40E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8836F5C71FFEE99300E0E40E /* GitHubProvider.swift in Sources */,
+				8836F5C31FFEE6D700E0E40E /* GitHubService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +339,9 @@
 		};
 		8836F5C01FFEE51300E0E40E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 786C2CF200C2FD21A6D37573 /* Pods-GitHubProvider.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -265,6 +354,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thekairuz.GitHubProvider;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -272,7 +362,9 @@
 		};
 		8836F5C11FFEE51300E0E40E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F82696D708ED08B9A8237255 /* Pods-GitHubProvider.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -293,7 +385,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8836F5B11FFEE51300E0E40E /* Build configuration list for PBXProject "GitHubProvider" */ = {
+		8836F5B11FFEE51300E0E40E /* Build configuration list for PBXProject "GitHubServices" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8836F5BD1FFEE51300E0E40E /* Debug */,
@@ -302,7 +394,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8836F5BF1FFEE51300E0E40E /* Build configuration list for PBXNativeTarget "GitHubProvider" */ = {
+		8836F5BF1FFEE51300E0E40E /* Build configuration list for PBXNativeTarget "GitHubServices" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8836F5C01FFEE51300E0E40E /* Debug */,
