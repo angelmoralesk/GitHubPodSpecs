@@ -25,6 +25,7 @@ public class GitHubProvider {
                     print(ghUserRepos)
                     completion(true, ghUserRepos, nil)
                 } catch {
+                    print(error)
                     completion(false, [], nil)
                 }
                 
