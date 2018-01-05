@@ -10,7 +10,8 @@
 		8836F5BC1FFEE51300E0E40E /* GitHubProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 8836F5BA1FFEE51300E0E40E /* GitHubProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8836F5C31FFEE6D700E0E40E /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836F5C21FFEE6D700E0E40E /* GitHubService.swift */; };
 		8836F5C71FFEE99300E0E40E /* GitHubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836F5C61FFEE99300E0E40E /* GitHubProvider.swift */; };
-		CA9E85DA051DBBA978736070 /* Pods_GitHubProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 719E2CC3D223D9FA513A4281 /* Pods_GitHubProvider.framework */; };
+		88EA3E9B1FFEF3EB008F942E /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88EA3E9C1FFEF3EB008F942E /* Moya.framework */; };
+		88EA3E9F1FFEF740008F942E /* GitHubResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EA3E9E1FFEF740008F942E /* GitHubResults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,11 @@
 		8836F5BB1FFEE51300E0E40E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8836F5C21FFEE6D700E0E40E /* GitHubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubService.swift; sourceTree = "<group>"; };
 		8836F5C61FFEE99300E0E40E /* GitHubProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubProvider.swift; sourceTree = "<group>"; };
+		886C9C2C1FFEFB09005C76B8 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		886C9C301FFEFB60005C76B8 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88EA3E9C1FFEF3EB008F942E /* Moya.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Moya.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88EA3E9E1FFEF740008F942E /* GitHubResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubResults.swift; sourceTree = "<group>"; };
+		88EA3EA11FFEFA37008F942E /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F82696D708ED08B9A8237255 /* Pods-GitHubProvider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubProvider.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubProvider/Pods-GitHubProvider.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -29,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA9E85DA051DBBA978736070 /* Pods_GitHubProvider.framework in Frameworks */,
+				88EA3E9B1FFEF3EB008F942E /* Moya.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +74,7 @@
 			children = (
 				8836F5C41FFEE91100E0E40E /* Endpoint */,
 				8836F5C51FFEE92500E0E40E /* Proxy */,
+				88EA3E9D1FFEF718008F942E /* Model */,
 				8836F5BA1FFEE51300E0E40E /* GitHubProvider.h */,
 				8836F5BB1FFEE51300E0E40E /* Info.plist */,
 			);
@@ -90,9 +97,21 @@
 			path = Proxy;
 			sourceTree = "<group>";
 		};
+		88EA3E9D1FFEF718008F942E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88EA3E9E1FFEF740008F942E /* GitHubResults.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DE8D03C265AA25E7738ABEFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				886C9C301FFEFB60005C76B8 /* SwiftyJSON.framework */,
+				886C9C2C1FFEFB09005C76B8 /* SwiftyJSON.framework */,
+				88EA3EA11FFEFA37008F942E /* SwiftyJSON.framework */,
+				88EA3E9C1FFEF3EB008F942E /* Moya.framework */,
 				719E2CC3D223D9FA513A4281 /* Pods_GitHubProvider.framework */,
 			);
 			name = Frameworks;
@@ -217,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8836F5C71FFEE99300E0E40E /* GitHubProvider.swift in Sources */,
+				88EA3E9F1FFEF740008F942E /* GitHubResults.swift in Sources */,
 				8836F5C31FFEE6D700E0E40E /* GitHubService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

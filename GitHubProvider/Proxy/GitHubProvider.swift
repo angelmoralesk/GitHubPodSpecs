@@ -9,9 +9,9 @@
 import Foundation
 import Moya
 
-class GitHubProvider {
+public class GitHubProvider {
     
-    static func fetchRepositories(userId : String, completion: @escaping (_ success : Bool)->()) {
+    public static func fetchRepositories(userId : String, completion: @escaping (_ success : Bool)->()) {
         
         let provider = MoyaProvider<GitHubService>()
         provider.request(.showReposFrom(user: userId)) { result in
@@ -20,6 +20,11 @@ class GitHubProvider {
             case let .success(moyaResponse):
                 let data = moyaResponse.data // Data, your JSON response is probably in here!
                 let statusCode = moyaResponse.statusCode // Int - 200, 401, 500, etc
+                do {
+                    let jsonData = try JSONSerialization.data(withJSONObject: data, options: []) 
+                    print(jsonData) // this is nil
+                }catch{
+                }
                 completion(true)
             // do something in your app
             case let .failure(error):
