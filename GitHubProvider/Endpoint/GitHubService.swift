@@ -30,8 +30,6 @@ extension GitHubService : TargetType {
         switch self {
         case .showReposFrom(user: let user):
             return "/users/\(user)/repos"
-        default:
-            return ""
         }
     }
     var method: Moya.Method {
