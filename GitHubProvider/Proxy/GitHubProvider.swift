@@ -21,11 +21,13 @@ public class GitHubProvider {
                 let data = moyaResponse.data // Data, your JSON response is probably in here!
                 let statusCode = moyaResponse.statusCode // Int - 200, 401, 500, etc
                 do {
-                    let jsonData = try JSONSerialization.data(withJSONObject: data, options: []) 
-                    print(jsonData) // this is nil
-                }catch{
+                    let ghUserRepos = try JSONDecoder().decode([GHUserRepo].self, from: data)
+                    print(ghUserRepos)
+                    completion(true)
+                } catch {
+                    print(error)
                 }
-                completion(true)
+                
             // do something in your app
             case let .failure(error):
                 completion(false)
