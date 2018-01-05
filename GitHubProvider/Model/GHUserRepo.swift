@@ -8,14 +8,14 @@
 
 import Foundation
 
-struct GHUserRepo {
+public struct GHUserRepo {
     
     let id : Int
     let name : String
     let owner : GHOwner
     let description : String?
     
-    init(id : Int, name : String, owner : GHOwner, description : String?) {
+    public init(id : Int, name : String, owner : GHOwner, description : String?) {
         self.id = id
         self.name = name
         self.owner = owner

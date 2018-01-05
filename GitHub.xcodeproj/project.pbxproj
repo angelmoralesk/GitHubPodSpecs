@@ -11,7 +11,7 @@
 		8836F5C31FFEE6D700E0E40E /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836F5C21FFEE6D700E0E40E /* GitHubService.swift */; };
 		8836F5C71FFEE99300E0E40E /* GitHubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836F5C61FFEE99300E0E40E /* GitHubProvider.swift */; };
 		88EA3E9B1FFEF3EB008F942E /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88EA3E9C1FFEF3EB008F942E /* Moya.framework */; };
-		88EA3E9F1FFEF740008F942E /* GHUserRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EA3E9E1FFEF740008F942E /* GHUserRepos.swift */; };
+		88EA3E9F1FFEF740008F942E /* GHUserRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EA3E9E1FFEF740008F942E /* GHUserRepo.swift */; };
 		88FDC4231FFFD22100F358EA /* GHOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FDC4221FFFD22100F358EA /* GHOwner.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		886C9C2C1FFEFB09005C76B8 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		886C9C301FFEFB60005C76B8 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88EA3E9C1FFEF3EB008F942E /* Moya.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Moya.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		88EA3E9E1FFEF740008F942E /* GHUserRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHUserRepos.swift; sourceTree = "<group>"; };
+		88EA3E9E1FFEF740008F942E /* GHUserRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHUserRepo.swift; sourceTree = "<group>"; };
 		88EA3EA11FFEFA37008F942E /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88FDC4221FFFD22100F358EA /* GHOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHOwner.swift; sourceTree = "<group>"; };
 		F82696D708ED08B9A8237255 /* Pods-GitHubProvider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubProvider.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubProvider/Pods-GitHubProvider.release.xcconfig"; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 		88EA3E9D1FFEF718008F942E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				88EA3E9E1FFEF740008F942E /* GHUserRepos.swift */,
+				88EA3E9E1FFEF740008F942E /* GHUserRepo.swift */,
 				88FDC4221FFFD22100F358EA /* GHOwner.swift */,
 			);
 			path = Model;
@@ -239,7 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8836F5C71FFEE99300E0E40E /* GitHubProvider.swift in Sources */,
-				88EA3E9F1FFEF740008F942E /* GHUserRepos.swift in Sources */,
+				88EA3E9F1FFEF740008F942E /* GHUserRepo.swift in Sources */,
 				88FDC4231FFFD22100F358EA /* GHOwner.swift in Sources */,
 				8836F5C31FFEE6D700E0E40E /* GitHubService.swift in Sources */,
 			);

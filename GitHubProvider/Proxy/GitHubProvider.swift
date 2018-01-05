@@ -11,7 +11,7 @@ import Moya
 
 public class GitHubProvider {
     
-    public static func fetchRepositories(userId : String, completion: @escaping (_ success : Bool)->()) {
+    public static func fetchRepositories(userId : String, completion: @escaping (_ success : Bool,_ repositories : [GHUserRepo],_ error : NSError?)->()) {
         
         let provider = MoyaProvider<GitHubService>()
         provider.request(.showReposFrom(user: userId)) { result in
@@ -23,15 +23,15 @@ public class GitHubProvider {
                 do {
                     let ghUserRepos = try JSONDecoder().decode([GHUserRepo].self, from: data)
                     print(ghUserRepos)
-                    completion(true)
+                    completion(true, ghUserRepos, nil)
                 } catch {
-                    print(error)
+                    completion(false, [], nil)
                 }
                 
             // do something in your app
             case let .failure(error):
-                completion(false)
-                // TODO: handle the error == best. comment. ever.
+                completion(false, [], nil)
+               
             }
         }
         

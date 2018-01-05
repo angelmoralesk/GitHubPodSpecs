@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct GHOwner {
+public struct GHOwner {
     let login : String
     let id : Int
     let avatar_url : String
     
-    init(login : String, id: Int, avatar_url: String) {
+    public init(login : String, id: Int, avatar_url: String) {
         self.login = login
         self.id = id
         self.avatar_url = avatar_url
