@@ -10,10 +10,10 @@ import Foundation
 
 public struct GHUserRepo {
     
-    let id : Int
-    let name : String
-    let owner : GHOwner
-    let description : String?
+    public let id : Int
+    public let name : String
+    public let owner : GHOwner
+    public let description : String?
     
     public init(id : Int, name : String, owner : GHOwner, description : String?) {
         self.id = id
@@ -33,7 +33,7 @@ extension GHUserRepo : Decodable {
         case description = "description"
     }
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: GHUserRepoKeys.self)
         let id : Int = try container.decode(Int.self, forKey: .id)
         let name : String = try container.decode(String.self, forKey: .name)

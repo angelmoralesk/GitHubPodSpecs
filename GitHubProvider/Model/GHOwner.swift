@@ -9,9 +9,9 @@
 import Foundation
 
 public struct GHOwner {
-    let login : String
-    let id : Int
-    let avatar_url : String
+    public let login : String
+    public let id : Int
+    public let avatar_url : String
     
     public init(login : String, id: Int, avatar_url: String) {
         self.login = login
@@ -29,7 +29,7 @@ extension GHOwner : Decodable {
         case avatar_url = "avatar_url"
     }
     
-   init(from decoder: Decoder) throws {
+   public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: GHOwnerKeys.self)
         let login : String = try container.decode(String.self, forKey: .login)
         let id : Int = try container.decode(Int.self, forKey: .id)
