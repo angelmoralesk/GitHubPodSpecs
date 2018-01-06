@@ -21,7 +21,7 @@ s.author = { "TheKairuz" => "a.jesse3001@gmail.com" }
 
 
 # For example,
-# s.homepage = "https://github.com/ctime95/GitHubProvider"
+s.homepage = "https://github.com/ctime95/GitHubProvider"
 
 
 # 6 - Replace this URL with your own Git URL from "Quick Setup"
